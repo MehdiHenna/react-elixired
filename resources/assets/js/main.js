@@ -12,4 +12,4 @@ ReactDOM.render(
 var myCodeMirror = CodeMirror(document.getElementById(input-user), {
 	value: "function myScript(){return 100;}\n",
 	mode: "markdown"
-})
+});
