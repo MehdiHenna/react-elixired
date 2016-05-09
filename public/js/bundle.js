@@ -19036,7 +19036,12 @@ module.exports = require('./lib/React');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-ReactDOM.render(React.createElement('h1', null, 'Hello, world!'), document.getElementById('hello'));
+ReactDOM.render(React.createElement('h1', null, 'Hello'), document.getElementById('hello'));
+
+var myCodeMirror = CodeMirror(document.getElementById(input - user), {
+  value: "function myScript(){return 100;}\n",
+  mode: "markdown"
+});
 
 },{"react":158,"react-dom":29}]},{},[159]);
 

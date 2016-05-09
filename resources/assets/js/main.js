@@ -1,10 +1,15 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var myCodeMirror(document.body);
 
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <h1>Hello</h1>,
   document.getElementById('hello')
 );
+
+
+var myCodeMirror = CodeMirror(document.getElementById(input-user), {
+	value: "function myScript(){return 100;}\n",
+	mode: "markdown"
+})
