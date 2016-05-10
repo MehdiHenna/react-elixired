@@ -1,7 +1,9 @@
-$(document.ready(function(){
+$(document).ready(function(){
 
-var code = $(".container")[0];
-var editor = CodeMirror.fromTextArea(code, {
+var container = $('.container');
+var editor = CodeMirror(container, {
+	mode: "markdown",
 	lineNumbers : true
 	});
+editor.getValue();
 });
