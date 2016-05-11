@@ -1,9 +1,15 @@
 $(document).ready(function(){
 
-var container = $('.container');
-var editor = CodeMirror(container, {
+
+var editor = CodeMirror.fromTextArea(document.getElementById('container'), {
 	mode: "markdown",
+	matchBracket: true,
 	lineNumbers : true
+
 	});
-editor.getValue();
+
+$(".push").on('click', function(){
+$(".result").append(editor.getValue());
+});
+
 });
