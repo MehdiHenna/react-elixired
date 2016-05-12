@@ -1302,11 +1302,10 @@ $(document).ready(function () {
 
 	});
 
-	$(".push").on('click', function () {
-
-		var tanslation = marked(editor.getValue());
-
-		$(".translation-result").append(tanslation);
+	$("#block-code").keyup(function () {
+		var text = $(this).val();
+		var translate = marked(text);
+		$(".translation-result").append(translate);
 	});
 });
 
