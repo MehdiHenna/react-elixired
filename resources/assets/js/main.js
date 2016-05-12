@@ -1,7 +1,7 @@
 $(document).ready(function(){
+ 
 
-
-var editor = CodeMirror.fromTextArea(document.getElementById('container'), {
+var editor = CodeMirror.fromTextArea(document.getElementById('block-code'), {
 	mode: "markdown",
 	lineNumbers : true,
 	lineWrapping: true,
@@ -11,7 +11,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById('container'), {
 	});
 
 $(".push").on('click', function(){
-$(".result").append(editor.getValue());
+$(".translation-result").append(editor.getValue());
 });
 
 

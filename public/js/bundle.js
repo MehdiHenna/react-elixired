@@ -3,7 +3,7 @@
 
 $(document).ready(function () {
 
-	var editor = CodeMirror.fromTextArea(document.getElementById('container'), {
+	var editor = CodeMirror.fromTextArea(document.getElementById('block-code'), {
 		mode: "markdown",
 		lineNumbers: true,
 		lineWrapping: true,
@@ -13,7 +13,7 @@ $(document).ready(function () {
 	});
 
 	$(".push").on('click', function () {
-		$(".result").append(editor.getValue());
+		$(".translation-result").append(editor.getValue());
 	});
 });
 
