@@ -1,5 +1,5 @@
 $(document).ready(function(){
- 
+var marked = require('marked'); 
 
 var editor = CodeMirror.fromTextArea(document.getElementById('block-code'), {
 	mode: "markdown",
@@ -11,7 +11,10 @@ var editor = CodeMirror.fromTextArea(document.getElementById('block-code'), {
 	});
 
 $(".push").on('click', function(){
-$(".translation-result").append(editor.getValue());
+
+var tanslation = marked(editor.getValue());
+
+$(".translation-result").append(tanslation);
 });
 
 
