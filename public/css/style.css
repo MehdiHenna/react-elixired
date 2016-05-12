@@ -2,7 +2,7 @@ body {
   background-color: white;
   color: black; }
 
-.result {
+.translation-result {
   width: 100%;
   height: 500px;
   border: 1px solid black; }

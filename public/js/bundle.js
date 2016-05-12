@@ -1292,8 +1292,9 @@ if (typeof module !== 'undefined' && typeof exports === 'object') {
 
 $(document).ready(function () {
 	var marked = require('marked');
-
-	var editor = CodeMirror.fromTextArea(document.getElementById('block-code'), {
+	var block_code = document.getElementById('block-code');
+	var translation_result = document.getElementById('translation-result');
+	var editor = CodeMirror.fromTextArea(block_code, {
 		mode: "markdown",
 		lineNumbers: true,
 		lineWrapping: true,
@@ -1302,10 +1303,8 @@ $(document).ready(function () {
 
 	});
 
-	$("#block-code").keyup(function () {
-		var text = $(this).val();
-		var translate = marked(text);
-		$(".translation-result").append(translate);
+	editor.on('change', function () {
+		$('#translation-result').html(marked(editor.getValue()));
 	});
 });
 
